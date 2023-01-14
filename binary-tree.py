@@ -44,7 +44,7 @@ class BinarySearchTreeNode:
         if val < self.data:
             # Val might be in left subtree
             if self.left:
-                self.left.search(val)
+                return self.left.search(val)
             else:
                 return False
 
@@ -67,6 +67,13 @@ if __name__ == '__main__':
     numbers = [17, 4, 1, 20, 9 , 23, 18, 34, 18, 4]
     numbers_tree = build_tree(numbers)
     print(numbers_tree.in_order_traversal())    
-    print(numbers_tree.search(200)) 
+    print(numbers_tree.search(200))
+
+    print("\n")
     
-       
+    countries = ["India", "Pakistan", "Germany", "USA", "China", "India", "UK", "USA"]
+    country_tree = build_tree(countries)
+    print("UK is in the list?", country_tree.search("UK"))
+    print("Sweden is in the list?", country_tree.search("Sweden"))
+
+    print(country_tree.in_order_traversal())
