@@ -122,6 +122,7 @@ def build_tree(elements):
 if __name__ == '__main__':
     numbers = [17, 4, 1, 20, 9 , 23, 18, 34, 18, 4]
     numbers_tree = build_tree(numbers)
+    numbers_tree.delete(20)
 
     print("Input numbers:", numbers, "\n")
     print("Minimum number:", numbers_tree.find_min())
@@ -129,4 +130,5 @@ if __name__ == '__main__':
     print("Sum of all numbers:", numbers_tree.calculate_sum(), "\n")
     print("In order traversal:", numbers_tree.in_order_traversal())
     print("Pre order traversal:", numbers_tree.pre_order_traversal())
-    print("Post order traversal:", numbers_tree.post_order_traversal())
+    print("Post order traversal:", numbers_tree.post_order_traversal(), "\n")
+    print("After deleting 20:", numbers_tree.in_order_traversal())
