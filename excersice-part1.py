@@ -60,4 +60,13 @@ class BinarySearchTreeNode:
         if self.right:
             elements += self.right.pre_order_traversal()
         return elements
-        
+    
+    # post_order_traversal(): performs post order traversal of a binary tree
+    def post_order_traversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.post_order_traversal()
+        if self.right:
+            elements += self.right.post_order_traversal()
+        elements.append(self.data)
+        return elements
