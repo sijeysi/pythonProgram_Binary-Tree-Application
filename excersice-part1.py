@@ -102,6 +102,9 @@ if __name__ == '__main__':
     numbers_tree = build_tree(numbers)
 
     print("Input numbers:", numbers, "\n")
+    print("Minimum number:", numbers_tree.find_min())
+    print("Maximum number:", numbers_tree.find_max())
+    print("Sum of all numbers:", numbers_tree.calculate_sum(), "\n")
     print("In order traversal:", numbers_tree.in_order_traversal())
     print("Pre order traversal:", numbers_tree.pre_order_traversal())
     print("Post order traversal:", numbers_tree.post_order_traversal())
