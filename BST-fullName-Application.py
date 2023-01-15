@@ -1,4 +1,4 @@
-from binaryTree import BinarySearchTreeNode
+from BinarySearchTree import BinarySearchTreeNode
 
 def build_tree(elements):
     root = BinarySearchTreeNode(elements[0])
