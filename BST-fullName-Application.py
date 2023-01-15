@@ -134,6 +134,4 @@ if __name__ == '__main__':
     print("After deleting 'A':", lettersName.in_order_traversal())
     print("Updated minimum letter:", lettersName.find_min())
     print("Updated maximum letter:", lettersName.find_max())
-
-
     
