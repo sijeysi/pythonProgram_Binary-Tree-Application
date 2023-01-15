@@ -40,3 +40,24 @@ class BinarySearchTreeNode:
                 return self.right.search(val)
             else:
                 return False
+
+    # in_order_traversal(): performs in order traversal of a binary tree
+    def in_order_traversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.in_order_traversal()
+        elements.append(self.data)
+
+        if self.right:
+            elements += self.right.in_order_traversal()
+        return elements
+
+    # pre_order_traversal(): performs pre order traversal of a binary tree
+    def pre_order_traversal(self):
+        elements = [self.data]
+        if self.left:
+            elements += self.left.pre_order_traversal()
+        if self.right:
+            elements += self.right.pre_order_traversal()
+        return elements
+        
