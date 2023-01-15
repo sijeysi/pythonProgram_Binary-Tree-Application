@@ -71,6 +71,12 @@ class BinarySearchTreeNode:
         elements.append(self.data)
         return elements
 
+    # find_min(): finds minimum element in entire binary tree
+    def find_min(self):
+        if self.left is None:
+            return self.data
+        return self.left.find_min()
+
 # Build Binary Tree
 def build_tree(elements):
     root = BinarySearchTreeNode(elements[0])
