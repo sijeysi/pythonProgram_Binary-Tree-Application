@@ -120,9 +120,20 @@ if __name__ == '__main__':
     lettersName = build_tree(numbers)
 
     print("Full Name: CRYSTAL JANE CADIMAS", "\n")
-    print("Minimum letters:", lettersName.find_min())
-    print("Maximum letters:", lettersName.find_max(), "\n")
+    print("Minimum letter:", lettersName.find_min())
+    print("Maximum letter:", lettersName.find_max(), "\n")
+
     print("In order traversal:", lettersName.in_order_traversal())
     print("Pre order traversal:", lettersName.pre_order_traversal())
-    print("Post order traversal:", lettersName.post_order_traversal())
+    print("Post order traversal:", lettersName.post_order_traversal(), "\n")
+
+    print("Letter 'A' is in the list?", lettersName.search("A"))
+    print("Letter 'Z' is in the list?", lettersName.search("Z"), "\n")
+
+    lettersName.delete("A")
+    print("After deleting 'A':", lettersName.in_order_traversal())
+    print("Updated minimum letter:", lettersName.find_min())
+    print("Updated maximum letter:", lettersName.find_max())
+
+
     
